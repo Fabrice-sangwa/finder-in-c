@@ -20,9 +20,24 @@ typedef struct ListeSc{
 
 
 //Les fonctions de la liste chainée et de la structure argument
+ListeSc * initialiserListe();
+Argument * initialiserArgument(char * optioncourte, char *optionLong , char * valeur);
+
+
 void ajouter(ListeSc * liste, Argument * argument );
+void viderliste(ListeSc * liste); 
+
+
+ListeSc * genererArgument(int argc, char const *argv[]);
+ListeSc * argumentpredefini();
+
+
+
+//int taille(ListeSc * liste);
+
 
 int verfieroption(char * option);
+Argument * argumentExiste(ListeSc * liste, char * option);
 
 
 
